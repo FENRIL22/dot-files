@@ -156,6 +156,8 @@ call plug#begin('~/.vim/plugged')
 		\   'cmdopt': '-std=c++11'
 		\   },
 	    \ }
+	
+
 
 	" command {{{3
 	" 横分割時は下へ､ 縦分割時は右へ新しいウィンドウが開くようにする
@@ -172,9 +174,11 @@ call plug#begin('~/.vim/plugged')
 	"上のmac対応
 	nnoremap ¥r :cclose<CR>:write<CR>:QuickRun -mode n<CR>
 	xnoremap ¥r :<C-U>cclose<CR>:write<CR>gv:QuickRun -mode v<CR>
+	" nnoremap \r :!make -j ../Makefile<CR><CR>
 
 	" <C-c> でquickrunを停止
 	nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
+
 
 	" Previm and open-browser {{{2
 	Plug 'tyru/open-browser.vim'
@@ -289,11 +293,13 @@ elseif has("unix")
 endif
 
 
+
 " インクリメンタル検索を有効化
 "set incsearch
 " 補完時の一覧表示機能有効化
 "set wildmenu wildmode=list:full
 " 自動的にファイルを読み込むパスを設定 ~/.vim/userautoload/*vim
+
 
 "" vimrc compaction setting {{{1
 "
