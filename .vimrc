@@ -182,7 +182,8 @@ call plug#begin('~/.vim/plugged')
 
 	" Previm and open-browser {{{2
 	Plug 'tyru/open-browser.vim'
-	Plug 'kannokanno/previm'
+	" rich previm
+	Plug 't3nro/previm-KaTeX'
 	" config
 	augroup PrevimSettings
 	    autocmd!
