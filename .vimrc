@@ -129,6 +129,11 @@ call plug#begin('~/.vim/plugged')
 	"" exec    : 実行するコマンド
 	"" split : 下に開く設定
 	" status {{{3
+	"augroup PrevimSettings
+	"    autocmd!
+	"    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+	"augroup END
+	
 	let g:quickrun_config = {
 	    \   "_": {
 		\ 'runner'    : 'vimproc',
@@ -144,6 +149,14 @@ call plug#begin('~/.vim/plugged')
 		\ "outputter" : "multi:buffer:quickfix",
 		\   },
 	    \   'tex':{
+		\ 'command' : 'make',
+		\ 'split': '4sp',
+		\ 'outputter': 'error',
+		\ 'outputter/error/success': 'null',
+		\ 'outputter/error/error': 'quickfix',
+		\ 'exec': ['%c'],
+		\   },
+	    \   'markdown':{
 		\ 'command' : 'make',
 		\ 'split': '4sp',
 		\ 'outputter': 'error',
