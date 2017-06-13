@@ -15,6 +15,7 @@ init:
 	
 	@echo "" >> ~/.bash_profile
 	@echo "# auto created by init script" >> ~/.bash_profile
+	@echo "source ~/.bashrc" >> ~/.bash_profile
 	@echo "source $(CURDIR)/.bash_profile_ref" >> ~/.bash_profile
 	@echo "" >> ~/.bash_profile
 

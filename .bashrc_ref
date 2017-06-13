@@ -1,7 +1,5 @@
-function checkgit(){
-	cd $1
-	git pull
-	git push
+function gitcheck(){
+	(cd $1; git pull && git status)
 }
 
 
