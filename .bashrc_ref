@@ -2,4 +2,82 @@ function gitcheck(){
 	(cd $1; git pull && git status)
 }
 
+function gitpush(){
+	(cd $1; git push)
+}
 
+# Todo
+# output this repo lists
+function gitcheckall(){
+	pos=$PWD
+	cd ~/dev
+	echo "checking ~/dev..."
+	gitcheck chamber
+	gitcheck lapatex
+	gitcheck y-toolset
+
+	cd ~/docs
+	echo "checking ~/docs..."
+	gitcheck univ_m_2017
+	gitcheck univ_research
+
+	cd ~/env
+	echo "checking ~/env..."
+	gitcheck dotfiles
+	gitcheck envmgr
+	gitcheck secure_vars
+
+	cd $pos
+}
+
+function gitpushall(){
+	pos=$PWD
+	cd ~/dev
+	echo "pushing ~/dev..."
+	gitpush chamber
+	gitpush lapatex
+	gitpush y-toolset
+
+	cd ~/docs
+	echo "pushing ~/docs..."
+	gitpush univ_m_2017
+	gitpush univ_research
+
+	cd ~/env
+	echo "pushing ~/env..."
+	gitpush dotfiles
+	gitpush envmgr
+	gitpush secure_vars
+
+	cd $pos
+}
+
+function cddot(){
+	cd ~/env/dotfiles
+}
+
+function cdclass(){
+	cd ~/docs/univ_m_2017
+}
+
+function findbigfile(){
+	du -ma | sort -rn | head -100
+}
+
+#pyenv setting
+function setpyenv() {
+	export PATH="$PYENV_ROOT/bin:$PATH"
+	export PYENV_ROOT="$HOME/.pyenv"
+	eval "$(pyenv init -)"
+}
+
+#if [ "$1" = "format_dics" ]
+#then
+#	format_dics
+#	echo '
+#	################
+#	# Init OK      #
+#	################
+#	'
+#	exit
+#fi
