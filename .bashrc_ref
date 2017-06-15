@@ -60,6 +60,25 @@ function cdclass(){
 	cd ~/docs/univ_m_2017
 }
 
+function lsdev(){
+	(cd ~/dev;ls)
+}
+
+function cddev(){
+if [ ${#} -ne 0 ]; then
+	echo "cd $1"
+	cd ~/dev/$1
+else
+	echo "default cd: dev"
+	cd ~/dev
+fi	
+}
+
+function envreload(){
+	(cd ~; source .bashrc)
+}
+
+
 function findbigfile(){
 	du -ma | sort -rn | head -100
 }
@@ -73,7 +92,6 @@ function setpyenv() {
 
 #if [ "$1" = "format_dics" ]
 #then
-#	format_dics
 #	echo '
 #	################
 #	# Init OK      #
