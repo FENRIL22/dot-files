@@ -90,6 +90,11 @@ function setpyenv() {
 	eval "$(pyenv init -)"
 }
 
+
+function xrun(){
+	echo "find . -name $1 -type f -maxdepth 1 | xargs -I{} -t -P 5 bash -c 'echo  $1'"
+}
+
 #if [ "$1" = "format_dics" ]
 #then
 #	echo '
