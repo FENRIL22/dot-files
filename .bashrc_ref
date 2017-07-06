@@ -42,6 +42,7 @@ function gitpushall(){
 	cd ~/docs
 	echo "pushing ~/docs..."
 	gitpush univ_m_2017
+	gitpush univ_m_2017_ai
 	gitpush univ_research
 
 	cd ~/env
