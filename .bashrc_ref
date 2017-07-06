@@ -19,6 +19,7 @@ function gitcheckall(){
 	cd ~/docs
 	echo "checking ~/docs..."
 	gitcheck univ_m_2017
+	gitcheck univ_m_2017_ai
 	gitcheck univ_research
 
 	cd ~/env
