@@ -20,6 +20,7 @@ function gitcheckall(){
 	echo "checking ~/docs..."
 	gitcheck univ_m_2017
 	gitcheck univ_m_2017_ai
+	gitcheck univ_m_2017_alg
 	gitcheck univ_research
 
 	cd ~/env
@@ -43,6 +44,7 @@ function gitpushall(){
 	echo "pushing ~/docs..."
 	gitpush univ_m_2017
 	gitpush univ_m_2017_ai
+	gitpush univ_m_2017_alg
 	gitpush univ_research
 
 	cd ~/env
