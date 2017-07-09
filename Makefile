@@ -7,6 +7,7 @@ init:
 	ln -s $(CURDIR)/.vimrc ~/.vimrc
 	ln -s $(CURDIR)/.gvimrc ~/.gvimrc
 	ln -s $(CURDIR)/.eskk ~/.eskk
+	ln -s $(CURDIR)/.tmux.conf ~/.tmux.conf
 	
 	@echo "" >> ~/.bashrc
 	@echo "# auto created by init script" >> ~/.bashrc
