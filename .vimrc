@@ -82,7 +82,8 @@ call plug#begin('~/.vim/plugged')
 	" Use smartcase.
 	let g:neocomplcache_enable_smart_case = 1
 	" Set minimum syntax keyword length.
-	let g:neocomplcache_min_syntax_length = 3
+	"""let g:neocomplcache_min_syntax_length = 3
+	let g:neocomplete#sources#syntax#min_keyword_length = 3
 	let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 	
 	" Define dictionary.
@@ -241,6 +242,23 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-scripts/Wombat'
 
 " endPlugs{{{2
+" TMP
+Plug 'nosami/OmniSharp', {'for':['cs'], 'do':'xbuild server/OmniSharp.sln'}
+Plug 'OrangeT/vim-csharp', {'for':['cs', 'csi', 'csx' ] }
+Plug 'scrooloose/syntastic', {'for':['cs', 'csi', 'csx' ] }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+Plug 'tpope/vim-dispatch'
+
+
+" end
 call plug#end()
 
 
@@ -325,3 +343,4 @@ endif
 "" vim: foldmethod=marker
 "" vim: foldcolumn=3
 "" vim: foldlevel=0
+
