@@ -9,7 +9,7 @@ if has("mac")
     "noremap! \ ¥
 elseif has("unix")
     " unix固有の設定
-    set guifont=MyricaM\ M\ 15
+    set guifont=Ricty\ 15
     "set guifont=Monospace\ 18
 endif
 
