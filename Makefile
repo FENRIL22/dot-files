@@ -24,5 +24,6 @@ clean:
 	rm ~/.vimrc
 	rm ~/.gvimrc
 	rm ~/.eskk
+	rm ~/.tmux.conf
 	@echo "Please rm source $(CURDIR)/.bashrc_ref in .bashrc"
 	@echo "Pleaes rm source $(CURDIR)/.bash_profile_ref in .bash_profile"
