@@ -240,6 +240,13 @@ call plug#begin('~/.vim/plugged')
 	" >ColorScheme
 	Plug 'w0ng/vim-hybrid'
 	Plug 'vim-scripts/Wombat'
+	
+	" gdrive-metaraw.vim {{{2
+	Plug 'mattn/webapi-vim'
+	Plug 'mattn/vim-metarw-gdrive'
+	" win 
+	"Plug 'mattn/vim-metarw'
+	Plug 'kana/vim-metarw'
 
 " endPlugs{{{2
 " TMP
