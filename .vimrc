@@ -322,6 +322,9 @@ set relativenumber
 set laststatus=2 " ステータスラインを常に表示
 set statusline=%F%r%h%= " ステータスラインの内容
 
+" clipboardの同期を行う
+set clipboard+=unnamed
+
 if has("mac")
 " mac用の設定
 " キーマッピング(\をダイレクトに入力)
