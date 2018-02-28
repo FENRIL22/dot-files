@@ -240,6 +240,13 @@ call plug#begin('~/.vim/plugged')
 	" >ColorScheme
 	Plug 'w0ng/vim-hybrid'
 	Plug 'vim-scripts/Wombat'
+	
+	" gdrive-metaraw.vim {{{2
+	Plug 'mattn/webapi-vim'
+	Plug 'mattn/vim-metarw-gdrive'
+	" win 
+	"Plug 'mattn/vim-metarw'
+	Plug 'kana/vim-metarw'
 
 " endPlugs{{{2
 " TMP
@@ -319,6 +326,9 @@ set relativenumber
 " ステータスラインを表示
 set laststatus=2 " ステータスラインを常に表示
 set statusline=%F%r%h%= " ステータスラインの内容
+
+" clipboardの同期を行う
+set clipboard+=unnamed
 
 if has("mac")
 " mac用の設定
