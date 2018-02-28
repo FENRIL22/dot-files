@@ -257,6 +257,11 @@ let g:syntastic_check_on_wq = 0
 
 Plug 'tpope/vim-dispatch'
 
+if !exists('g:neocomplcache_force_omni_patterns')
+  let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_omni_patterns.cs = '[^.]\.\%(\u\{2,}\)\?'
+
 
 " end
 call plug#end()
